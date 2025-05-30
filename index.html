@@ -638,20 +638,7 @@
                 returnDate.value = '';
                 purpose.value = '';
                 
-                
-    const dbRef = window.firebaseRef(window.firebaseDB, 'borrows');
-    window.firebasePush(dbRef, {
-      item: selectedItem.textContent,
-      name: borrowerName.value.trim(),
-      department: departmentCode.value.trim(),
-      extension: extension.value.trim(),
-      borrowDate: borrowDate.value,
-      returnDate: returnDate.value,
-      purpose: purpose.value.trim(),
-      timestamp: Date.now()
-    });
-
-        alert('借用申請已提交！');
+                alert('借用申請已提交！');
                 
                 // 切換到借用紀錄頁籤
                 tabRecords.click();
@@ -1298,29 +1285,5 @@
             updateHistoryDisplay();
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'938d76fa07e5f228',t:'MTc0NjA4MzQ4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-<!-- Firebase SDK -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA1KR9Wf4eTYSHLenPPtXuSArgFBECqybM",
-    authDomain: "jraska-ee328.firebaseapp.com",
-    databaseURL: "https://jraska-ee328-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "jraska-ee328",
-    storageBucket: "jraska-ee328.firebasestorage.app",
-    messagingSenderId: "88222620386",
-    appId: "1:88222620386:web:a75bcb179aa257170c5cbb",
-    measurementId: "G-H0669LV9W0"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
-  window.firebaseDB = database;
-  window.firebaseRef = ref;
-  window.firebasePush = push;
-</script>
-
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'938d76fa07e5f228',t:'MTc0NjA4MzQ4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
